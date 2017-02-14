@@ -1,2 +1,5 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<%= form_tag("/tasks", method: "post") do %>
+  <%= label_tag(:name, "New task:") %>
+  <%= text_field_tag(:name) %>
+  <%= submit_tag("Add") %>
+<% end %>
